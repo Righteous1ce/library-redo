@@ -20,16 +20,38 @@ function Book(title, author, pages, status){
 
 
 const submit = document.getElementById('submit');
-const newBook = document.getElementById('new-book');
+const openModalBtn = document.getElementById('new-book');
+const closeModalBtn = document.getElementById('cancel');
 
-newBook.forEach(button, () => {
-    button.addEventListener(click, () => {
-        newBook.classList.add('active');
-    })
+openModalBtn.addEventListener('click', () => {
+    const modal = document.querySelector('.modal');
+    openModal(modal);
 });
 
+closeModalBtn.addEventListener('click', () => {
+    const modal = document.querySelector('.modal');
+    closeModal(modal);
+})
+
+
+function closeModal(modal){
+    modal.classList.remove('active');
+    backdrop.classList.remove('active');
+}
+function openModal(modal){
+    modal.classList.add('active');
+    backdrop.classList.add('active');
+};
+
+
+
+
+ 
+ 
+ 
 submit.addEventListener('click', () => {
-    console.log('hello');
+    addNewBook();
+    newBook.classList.remove('active');
 });
 
 

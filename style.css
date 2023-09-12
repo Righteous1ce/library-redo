@@ -1,0 +1,125 @@
+*::before, *::after{
+    box-sizing: border-box;
+
+}
+
+*{
+
+    margin: 0px;
+}
+
+
+
+.upper-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue
+    
+}
+
+.upper-navbar > h1{
+    margin: 10px;
+}
+
+#new-book{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    color: aliceblue;
+    background-color: rgb( 30, 144, 255);
+    cursor: pointer;
+}
+
+#new-book:hover{
+    background-color: rgba(30, 144, 155, 0.5);
+    
+
+}
+
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: aliceblue;
+    padding: 20px;
+    width: 350px;
+    max-width: 80%;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#backdrop{
+    opacity: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; 
+
+}
+
+#backdrop.active{
+    opacity: 1;
+    pointer-events: all;
+    
+}
+#input-form{
+    width: 300px;
+    
+}
+
+#lable-form{
+    padding: 10px;
+}
+
+input[type="radio"]{
+    margin: 10px;
+
+}
+
+.modal-btns{
+    width: 300px;
+    padding: 10px;
+    border: none;
+    margin: 10px;
+
+}
+
+#submit{
+    background-color: rgb(68, 255, 114);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+#submit:hover{
+    background-color: rgba(68, 255, 114, 0.5);
+}
+
+#cancel{
+    background-color: rgb(255, 50, 57);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+#cancel:hover{
+    background-color: rgba(255, 50, 57, 0.5);
+}

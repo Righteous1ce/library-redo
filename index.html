@@ -14,20 +14,37 @@
             <h1>Library</h1>
         </div>
         <div class="user-form">
-        <div class="left-input-bar">
-            <button id="new-book">New Book</button>
+        
+            <button id="new-book">+</button>
+
+            <div class="modal " id="new-book-modal">
+                <h1>Book Info</h1>
             <form>
-                    <label for="title">Title:</label><br>
-                    <input type="text" id="title"><br>
-                    <label for="author">Author:</label><br>
-                    <input type="text" id= author> <br>
-                    <label for="pages">Book Length:</label><br>
-                    <input type="text" id="pages"> <br>
-                    <label for="status">Reading Status:</label><br>
-                    <input type="text" id="status"> <br>
-                    <button id="submit">Submit</button>
+                    <label for="title" id="lable-form">Title:</label><br>
+                    <input type="text" class="title" id="input-form"><br>
+                    <label for="author" id="lable-form">Author:</label><br>
+                    <input type="text" class= "author" id="input-form"> <br>
+                    <label for="pages" id="lable-form">Book Length:</label><br>
+                    <input type="text" class="pages" id="input-form"> <br>
+
+
+
+                    
+                    <input type="radio" name="reading-status" id="finished" value='Finished '>
+                    <label for="finished">Finished</label>
+                    <input type="radio" name="reading-status" id="in-progress" value='In progress'>
+                    <label for="in-progress">In Progress</label>
+                    <input type="radio" name="reading-status" id="tbr" value="To Be Read">
+                    <label for="tbr">To Be Read</label> <br>
+                    <button id="submit" class="modal-btns">Submit</button>
+                    <button id="cancel" class="modal-btns">Cancel</button>
             </form>
+           
+
         </div>
+        <div id="backdrop" class=""></div>
+
+    
         <div class="main-display">
 
         </div>
