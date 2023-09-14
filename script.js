@@ -9,14 +9,9 @@ function Book(title, author, pages, status){
 }
 
 
-// maybe this needs the prototype
+function addBookToLibrary(){
 
-// function addBook(title, author, pages, status){
-    // let title = document.getElementById('title').value;
-    // let author = document.getElementById('author').value;
-    // let pages = document.getElementById('pages').value;
-    // let status = document.getElementById('status').value;
-// }
+}
 
 
 const submit = document.getElementById('submit');
