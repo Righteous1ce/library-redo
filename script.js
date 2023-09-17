@@ -18,23 +18,47 @@ function addBookToLibrary(){
         document.querySelector('input[name="reading-status"]:checked').value
 
     );
-    library.push(book);
-    
 
+    library.push(book);
+
+    
     const card = document.createElement('div');
     card.classList.add('card');
-    card.textContent += book.title;
-    card.textContent += book.author;
-    card.textContent += book.pages;
-    card.textContent += book.status;
+
+    const titleElement = document.createElement('h1');
+    titleElement.textContent = book.title;
+
+    const authorElement = document.createElement('p');
+    authorElement.textContent = 'By, ' + book.author;
+    authorElement.classList.add('author-info');
+
+    const pagesElement = document.createElement('p');
+    pagesElement.textContent = 'Book Length: ' + book.pages + ', pages';
+    pagesElement.classList.add('pages-info');
+
+    const statusElement = document.createElement('p');
+    statusElement.textContent = 'Reading Status: ' + book.status;
+    statusElement.classList.add('status-info');
+
+    const editBtn = document.createElement('button');
+    editBtn.innerHTML = 'Edit'
+    editBtn.classList.add('edit-btn');
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerHTML = 'Delete';
+    deleteBtn.classList.add('delete-btn');
+
+
+    card.appendChild(titleElement);
+    card.appendChild(authorElement);
+    card.appendChild(pagesElement);
+    card.appendChild(statusElement);
+    card.appendChild(editBtn);
+    card.appendChild(deleteBtn);
 
     document.getElementById('cards').appendChild(card);
-    
-       
-}
-
-
-
+     
+};
 
 
 
@@ -61,7 +85,6 @@ submitBtn.addEventListener('click', () => {
     
 });
 
-console.log(library);
 
 
 function closeModal(modal){
@@ -73,21 +96,4 @@ function openModal(modal){
     modal.classList.add('active');
     backdrop.classList.add('active');
 };
-
-
-
-
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
 
