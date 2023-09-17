@@ -11,10 +11,34 @@ function Book(title, author, pages, status){
 
 function addBookToLibrary(){
 
+    const book = new Book (
+        document.querySelector('.title').value,
+        document.querySelector('.author').value,
+        document.querySelector('.pages').value,
+        document.querySelector('input[name="reading-status"]:checked').value
+
+    );
+    library.push(book);
+    
+
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.textContent += book.title;
+    card.textContent += book.author;
+    card.textContent += book.pages;
+    card.textContent += book.status;
+
+    document.getElementById('cards').appendChild(card);
+    
+       
 }
 
 
-const submit = document.getElementById('submit');
+
+
+
+
+const submitBtn = document.getElementById('submit');
 const openModalBtn = document.getElementById('new-book');
 const closeModalBtn = document.getElementById('cancel');
 
@@ -29,10 +53,22 @@ closeModalBtn.addEventListener('click', () => {
 })
 
 
+submitBtn.addEventListener('click', () => {
+    const modal = document.querySelector('.modal');
+    addBookToLibrary();
+    closeModal(modal);
+    
+    
+});
+
+console.log(library);
+
+
 function closeModal(modal){
     modal.classList.remove('active');
     backdrop.classList.remove('active');
-}
+};
+
 function openModal(modal){
     modal.classList.add('active');
     backdrop.classList.add('active');
@@ -44,10 +80,7 @@ function openModal(modal){
  
  
  
-submit.addEventListener('click', () => {
-    addNewBook();
-    newBook.classList.remove('active');
-});
+
 
 
 

@@ -14,13 +14,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    background-color: rgb(20, 10, 155);
     
 }
 
 .upper-navbar > h1{
     margin: 10px;
     font-size: 50px;
+    color: white;
 }
 
 #new-book{
@@ -30,7 +31,7 @@
     border: none;
     font-size: 30px;
     color: aliceblue;
-    background-color: rgb( 30, 144, 255);
+    background-color: rgb(33, 222, 255);
     cursor: pointer;
 }
 
@@ -143,7 +144,6 @@ input[type="radio"]{
 
 .cards{
     background-color: pink;
-    margin: 0;
     display: grid;
     grid-template-columns: 50% 50%;
 }
