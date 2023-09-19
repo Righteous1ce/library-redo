@@ -57,14 +57,26 @@ function addBookToLibrary(){
     card.appendChild(deleteBtn);
 
     document.getElementById('cards').appendChild(card);
+
+    deleteBtn.addEventListener('click', () => {
+        card.classList.remove('card');
+        card.innerHTML = '';
+    });
+
+    editBtn.addEventListener('click', () => {
+        openModal();
+    })
      
 };
+
+
 
 
 
 const submitBtn = document.getElementById('submit');
 const openModalBtn = document.getElementById('new-book');
 const closeModalBtn = document.getElementById('cancel');
+
 
 openModalBtn.addEventListener('click', () => {
     const modal = document.querySelector('.modal');

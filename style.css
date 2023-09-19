@@ -7,13 +7,11 @@
     margin: 0px;
 }
 
-
-
 .upper-navbar{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(20, 10, 155);
+    background-color: black;
     
 }
 
@@ -36,7 +34,6 @@
 
 #new-book:hover{
     background-color: rgba(30, 144, 155, 0.5);
-    
 
 }
 
@@ -44,7 +41,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   background-color: rgba(156, 216, 230, 0.5);
+    background-color: #a0a0a0;
+    color: aliceblue;
 }
 .left-input > p{
     font-family: 'Times New Roman', Times, serif;
@@ -52,6 +50,7 @@
     font-weight: bold;
     padding: 10px;
 }
+
 .modal{
     display: flex;
     justify-content: center;
@@ -66,6 +65,7 @@
     padding: 20px;
     width: 350px;
     max-width: 80%;
+    border-radius: 20px;
     font-family: 'Times New Roman', Times, serif;
     z-index: 10;
     
@@ -95,11 +95,15 @@
 }
 #input-form{
     width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
     
 }
 
 #lable-form{
-    padding: 10px;
+    font-size: 20px;
+
 }
 
 input[type="radio"]{
@@ -107,12 +111,18 @@ input[type="radio"]{
 
 }
 
+
+
 .modal-btns{
     width: 300px;
     padding: 10px;
     border: none;
     margin: 10px;
 
+}
+
+#submit, #cancel{
+    border-radius: 20px;
 }
 
 #submit{
@@ -139,14 +149,16 @@ input[type="radio"]{
 
 
 .cards{
-    
     display: grid;
     grid-template-columns: 50% 50%;
+    
 }
 .card{
     background-color: aliceblue;
     padding: 20px;
     margin: 20px;
+    border-radius: 20px;
+    border-left: 10px solid black;
 
 
 
@@ -154,6 +166,10 @@ input[type="radio"]{
 
 .card > h1 {
     font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     
     
 }
