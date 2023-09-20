@@ -45,7 +45,7 @@ function addBookToLibrary(){
     editBtn.classList.add('change-status-btn');
 
     const deleteBtn = document.createElement('button');
-    deleteBtn.innerHTML = 'Delete';
+    deleteBtn.innerHTML = 
     deleteBtn.classList.add('delete-btn');
 
 
