@@ -41,8 +41,8 @@ function addBookToLibrary(){
     statusElement.classList.add('status-info');
 
     const editBtn = document.createElement('button');
-    editBtn.innerHTML = 'Edit'
-    editBtn.classList.add('edit-btn');
+    editBtn.innerHTML = 'Change Status'
+    editBtn.classList.add('change-status-btn');
 
     const deleteBtn = document.createElement('button');
     deleteBtn.innerHTML = 'Delete';
@@ -58,14 +58,22 @@ function addBookToLibrary(){
 
     document.getElementById('cards').appendChild(card);
 
+    card.setAttribute('data-status', book.status);
+
     deleteBtn.addEventListener('click', () => {
         card.classList.remove('card');
         card.innerHTML = '';
     });
 
     editBtn.addEventListener('click', () => {
+        const currentStatus = card.getAttribute('data-status', book.status);
+        newStatus = currentStatus === 'Finished' ? 'In Progress' : 'Finished';
+
+        card.setAttribute('data-status', newStatus);
+        const statusElement = card.querySelector('.status-info');
+        statusElement.textContent = 'Reading Status: ' + newStatus;
         
-    })
+    });
      
 };
 

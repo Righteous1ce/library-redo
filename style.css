@@ -182,7 +182,7 @@ input[type="radio"]{
     font-size: 1rem;
 }
 
-.edit-btn, .delete-btn{
+.change-status-btn, .delete-btn{
     padding: 5px 20px 5px 20px;
     margin: 10px;
     border: none;
@@ -190,11 +190,11 @@ input[type="radio"]{
     cursor: pointer;
 
 }
-.edit-btn{
+.change-status-btn{
     background-color: rgb(33, 222, 255);
 
 }
-.edit-btn:hover{
+.change-status-btn:hover{
     background-color: rgba(33, 222, 255, 0.5);
 }
 
