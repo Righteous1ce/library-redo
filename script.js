@@ -64,7 +64,7 @@ function addBookToLibrary(){
     });
 
     editBtn.addEventListener('click', () => {
-        openModal();
+        
     })
      
 };

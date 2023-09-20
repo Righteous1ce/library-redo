@@ -22,11 +22,11 @@
 }
 
 #new-book{
-    height: 40px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     border: none;
-    font-size: 30px;
+    font-size: 60px;
     color: aliceblue;
     background-color: rgb(33, 222, 255);
     cursor: pointer;
@@ -38,10 +38,10 @@
 }
 
 .left-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #a0a0a0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
     color: aliceblue;
 }
 .left-input > p{
@@ -150,7 +150,7 @@ input[type="radio"]{
 
 .cards{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 33% 33% 33%;
     
 }
 .card{
@@ -165,7 +165,7 @@ input[type="radio"]{
 }
 
 .card > h1 {
-    font-size: 60px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
