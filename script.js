@@ -1,8 +1,9 @@
 const library = [];
 
-// TEST
 
-function Book(title, author, pages, status){
+class Book{
+    
+   constructor (title, author, pages, status){
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -11,15 +12,15 @@ function Book(title, author, pages, status){
 }
 
 
-function addBookToLibrary(){
+addBookToLibrary(){
 
-    const book = new Book (
-        document.querySelector('.title').value,
-        document.querySelector('.author').value,
-        document.querySelector('.pages').value,
-        document.querySelector('input[name="reading-status"]:checked').value
-
-    );
+    const book = new Book(
+        this.title,
+        this.author, 
+        this.pages,
+        this.status, 
+    )
+    
 
     library.push(book);
 
@@ -47,7 +48,7 @@ function addBookToLibrary(){
     editBtn.classList.add('change-status-btn');
 
     const deleteBtn = document.createElement('button');
-    deleteBtn.innerHTML = 
+    deleteBtn.innerHTML = 'Delete'
     deleteBtn.classList.add('delete-btn');
 
 
@@ -69,7 +70,7 @@ function addBookToLibrary(){
 
     editBtn.addEventListener('click', () => {
         const currentStatus = card.getAttribute('data-status', book.status);
-        newStatus = currentStatus === 'Finished' ? 'In Progress' : 'Finished';
+        let newStatus = currentStatus === 'Finished' ? 'In Progress' : 'Finished';
 
         card.setAttribute('data-status', newStatus);
         const statusElement = card.querySelector('.status-info');
@@ -78,7 +79,7 @@ function addBookToLibrary(){
     });
      
 };
-
+};
 
 
 
@@ -101,9 +102,17 @@ closeModalBtn.addEventListener('click', () => {
 
 submitBtn.addEventListener('click', () => {
     const modal = document.querySelector('.modal');
-    addBookToLibrary();
-    closeModal(modal);
     
+    const subBook = new Book(
+        document.querySelector('.title').value,
+        document.querySelector('.author').value,
+        document.querySelector('.pages').value,
+        document.querySelector('input[name="reading-status"]:checked').value,
+        
+        )
+        
+        subBook.addBookToLibrary();
+        closeModal(modal);
     
 });
 
